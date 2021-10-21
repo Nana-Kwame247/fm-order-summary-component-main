@@ -87,21 +87,27 @@ select {
 }
 
 body {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  place-items: center;
-  align-items: center;
+  
   background-color: var(--pale-blue);
   background-image: url(../images/pattern-background-desktop.svg);
   background-size: 100% 50%;
   background-repeat: no-repeat;
 }
 
+.container{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
 .attribution {
   position: absolute;
   bottom: 1rem;
+  font-size: 12px;
 }
 
 .card {
@@ -115,45 +121,47 @@ body {
   box-shadow: 0 1rem 2rem 0 rgba(0,0,0,0.05);
 }
 
+
+
 .card__hero {
   width: 100%;
-  height: 220px;
+  height: 160px;
   object-fit: cover;
 }
 
 .card__body {
-  padding: 3rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1.5rem;
 }
 
 .title {
   font-weight: 900;
-  font-size: 1.75rem;
+  font-size: 1.4rem;
   text-align: center;
   color: var(--dark-blue);
   line-height: 1;
-  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
 }
 
 .message {
   text-align: center;
   color: var(--desaturated-blue);
   font-size: 16px;
-  margin-bottom: 1.5rem;
   line-height: 1.5;
 }
 
 .order-item {
   background-color: var(--very-pale-blue);
   border-radius: 0.75rem;
-  padding: 1.5rem;
+  padding: 1rem;
   display: flex;
   gap: 1rem;
   align-items: center;
-  margin-bottom: 2rem;
   width: 100%;
+  font-size: 14px
 }
 
 .order-item__decoration {
@@ -170,7 +178,6 @@ body {
 .order-item__details {
   display: flex;
   flex-direction: column;
-
 }
 
 .order-item__details__title {
@@ -187,8 +194,7 @@ body {
 }
 
 .order-item__actions a{
-  font-size: 14px;
-  font-weight: 700;
+  font-weight: 900;
   color: var(--bright-blue);
 }
 
@@ -199,15 +205,13 @@ body {
 
 .to-payment {
   display: block;
-  margin-bottom: 2rem;
   width: 100%;
   border: none;
   background-color: var(--bright-blue);
   color: white;
   text-align: center;
   font-weight: 700;
-  padding: 1rem;
-  font-size: 14px;
+  padding: 0.85rem;
   border-radius: 0.5rem;
   box-shadow: 0 1rem 1rem 0 hsl(245, 75%, 52%, 0.2);
   cursor: pointer;
@@ -226,4 +230,28 @@ body {
 
 .cancel-order:hover {
   color: var(--dark-blue)
+}
+
+
+@media (min-width: 768px) {
+  .card__hero {
+    height: 220px;
+  }
+
+  .card__body {
+    padding: 3rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .order-item {
+    padding: 1.5rem;
+  }
+
+  .order-item__details__title,
+  .order-item__details__price {
+    font-size: 1rem
+  }
 }
