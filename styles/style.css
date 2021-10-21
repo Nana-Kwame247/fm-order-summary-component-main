@@ -240,10 +240,12 @@ body {
 
   .card__body {
     padding: 3rem;
+    gap: 2rem;
   }
 
   .title {
     font-size: 1.75rem;
+    margin-top: 0;
   }
 
   .order-item {
